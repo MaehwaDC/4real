@@ -1,0 +1,35 @@
+
+$primary-background-color: #0E0E0E;
+$white: #fff;
+$black: #1e1d18;
+
+$dark-back-color: #272320;
+$dark-gray-fcolor: #4f4942;
+$green-fcolor: #2fbf76;
+$gray-fcolor: #544947;
+
+$red-back-color: #e34624;
+$red-border-color: #561e1a;
+
+$primary-font-gradient: linear-gradient(to bottom, rgba(124,100,85,1) 0%, rgba(201,182,160,1) 100%);
+
+$low-screen: '1366px';
+$higth-screen: '1920px';
+
+%defaultFontStyles {
+    font-family: MuseoCyrl, Fallback, sans-serif;
+    font-weight: 900;
+    color: $white;
+}
+
+%gradientText {
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+%montserratFontStyle {
+    font-family: Montserrat, Fallback, sans-serif;
+    font-weight: bold;
+    color: $white;
+}

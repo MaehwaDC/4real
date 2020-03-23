@@ -1,0 +1,23 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fortis/4real-html.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fortis/4real-html/issues"
+  },
+  "homepage": "https://github.com/fortis/4real-html#readme",
+  "dependencies": {
+    "phaser-ce": "^2.13.2",
+    "phaser-kinetic-scrolling-plugin": "^1.2.1"
+  }
+}

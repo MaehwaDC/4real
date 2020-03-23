@@ -1,0 +1,477 @@
+
+.loot-drum-wrapper {
+  height: 278px;
+
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #373a41;
+  background: url(../images/drum/drum-container-back.svg) 50% 100% no-repeat;
+  background-size: cover;
+  font-family: Montserrat, Tahoma, Verdana, sans-serif;
+  color: $primary-font-color;
+
+  padding: 0 49px 0 30px;
+
+  position: relative;
+
+  button {
+    text-decoration: none;
+    background-color: transparent;
+    border: unset;
+    color: inherit;
+
+    padding: unset;
+
+    cursor: pointer;
+  }
+
+  .aim-arrow {
+    width: 1px;
+    height: 100%;
+
+    box-shadow: 0 0 2px 0 #71757e;
+    background-color: #71757e;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1;
+
+    opacity: 0;
+    transition: opacity $animation-delay ease-out;
+
+    &::before {
+      content: "";
+      width: 29px;
+      height: 14px;
+
+      background: url(../images/drum/arrow.svg) no-repeat;
+
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    &:after {
+      content: "";
+      width: 29px;
+      height: 14px;
+
+      background: url(../images/drum/arrow.svg) no-repeat;
+
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0) rotate(180deg);
+    } 
+  }
+
+  .title {
+    min-height: 84px;
+    
+    display: flex;
+    justify-content: flex-end;
+
+    padding: 9px 50% 9px 0;
+
+    transition: padding $animation-delay ease-out;
+
+    .prices {
+      text-align: right;
+      text-transform: uppercase;
+
+      //deleted margin
+
+      position: absolute;
+      top: 85%;
+      left: 50%;
+      z-index: 7;
+      transform: translate(0, -50%);
+
+      transition: top $animation-delay ease-out;
+
+      span:before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: skewX(-15deg);
+      }
+
+      .current-price {
+        height: 40px;
+
+        display: flex;
+        align-items: center;
+        font-size: 17px;
+        font-weight: bold;
+        color: $white-font-color;
+
+        padding: 0 16px;
+        margin-right: 40px;
+
+        position: relative;
+        bottom: 11px;
+        z-index: 1;
+        
+        &:before {
+          background: $green-background-gradient;
+          border: 1px solid $primary-green-border-color;
+          box-shadow: 0 0 13px -2px $secondary-green-font-color;
+
+          z-index: -1;
+        }
+      }
+
+      .pre-price {        
+        display: inline-block;
+        text-decoration: line-through;
+        color: $yellow-font-color;
+        font-size: 13px;
+        font-weight: bold;
+
+        padding: 10px 12px 10px;
+        
+        position: relative;
+        z-index: 2;
+
+        &:before {
+          background: $dark-gray-background-color;
+          z-index: -1;
+        }
+
+        &:after {
+          content: "";
+          width: calc(100% + 2px);
+          height: calc(100% + 2px);
+
+          display: block;
+          background: linear-gradient(to bottom, rgba(58,46,71,1) 30%, rgba(190,164,36,1) 100%);
+          
+          margin: -1px;
+
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: skewX(-15deg);
+          z-index: -2;
+        }
+      }
+    }
+
+    .case-info {
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      padding-bottom: 4px;
+
+      transform: translate(60%, 0);
+      transition: transform $animation-delay ease-out;
+
+      .name {
+        font-size: 25px;
+        font-weight: bold;
+        text-transform: uppercase;
+        
+      }
+
+      .timer {
+        font-size: 12px;
+        margin-left: 0;
+
+        span {
+          padding-left: 10px;
+          color: $darck-yellow-font-color;
+        }
+      }
+    }
+  }
+  
+  .loot-drum {
+    height: 100%;
+    width: 100%;
+
+    position: relative;
+
+    .loot-list {
+      height: 100%;
+      width: 100%;
+
+      display: flex;
+      flex-direction: row;
+      opacity: 0.2;
+
+      position: relative;
+      overflow: hidden;
+
+      transition: opacity $animation-delay ease-out;
+
+      &:before {
+        content: "";
+        height: 100%;
+        
+        display: block;
+        box-shadow: 0 0 100px 120px rgba(25, 29, 37, 0.99);
+    
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+      }
+    
+      &:after {
+        content: "";
+        height: 100%;
+        
+        box-shadow: 0 0 100px 120px rgba(25, 29, 37, 0.99);
+    
+        position: absolute;
+        top: 0;
+        left: 100%;
+        transform: translate(-100%, 0);
+        z-index: 5;
+      }  
+    }
+
+    .case-img {
+      max-height: 200%;
+
+      position: absolute;
+      left: 50%;
+      top: -5px;
+      transform: translate(-50%,0);
+      z-index: 6;
+
+      
+      transition: 
+      left $animation-delay ease-out, 
+      top $animation-delay ease-out,
+      max-height $animation-delay ease-out;
+    }
+
+    .loot-item {
+      width: 150px;
+      min-width: 150px;
+      height: 100%;
+  
+      background: url("../images/live-drop/back-image.svg") no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      border: 1px solid #2a2d35;
+  
+      position: relative;
+  
+      cursor: pointer;
+  
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+  
+      &:before {
+        content: '';
+        width: 100%;
+        height: 70%;
+  
+        background-image: linear-gradient(to top, rgba(97, 137, 25, 0.5), rgba(97, 137, 25, 0));
+  
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      .name {
+        padding: 10px 0;
+        font-size: 13px;
+      }
+
+      .price {
+        font-size: 17px;
+        font-weight: 700;
+      }
+  
+      .rare {
+        display: block;
+        text-transform: capitalize;
+        color: $primary-font-color;
+        font-weight: 600;
+        font-size: 10px;
+  
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        z-index: 3;
+      }
+  
+      .live-underline {
+        height: 4px;
+        
+        background-color: #618919;
+        align-self: flex-end;
+  
+        position: absolute;
+        left: -1px;
+        right: -1px;
+        bottom: 0;
+        z-index: 1;
+      }
+    }
+  }
+
+  .select-container {
+    min-height: 82px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    position: relative;
+
+    .btns-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      top: -120%;
+      right: 0;
+
+      transition: top calc(#{$animation-delay} - 0.1s) ease-out;
+    }
+
+    .open-btns {
+      margin-top: 20px;
+
+      > button {
+        width: 105px;
+        height: 43px;
+  
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+  
+        &:first-child {
+          margin-right: 15px;
+        }
+      }
+
+      .demo {
+        border: 1px solid $middle-gray-border-color;
+        background: url(../images/drum/button-texture.svg) no-repeat, linear-gradient(to bottom, rgba(100,100,100,1) 21%, rgba(128,128,128,1) 100%);
+      }
+  
+      .open {
+        border: 1px solid $primary-green-border-color;
+        background: url(../images/drum/button-texture.svg) no-repeat,  $green-background-gradient;
+      }
+    }
+
+    .multipliers-wrapper {
+      display: flex;
+
+      .multiplier-btn {
+        height: 34px;
+        width: 34px;
+
+        border: 1px solid $dark-gray-border-color2;
+        border-radius: 2px;
+        font-weight: bold;
+        font-size: 14px;
+
+        &:hover {
+          border-color: $light-gray-border-color;
+        }
+
+        &:not(:last-child) {
+          margin-right: 5px;
+        }
+
+        &.selected {
+          border-color: $primary-green-border-color;
+          background-image: $green-background-gradient-right;
+        }
+      }
+    }
+  }
+
+  
+  &.opened {
+    
+    .aim-arrow {
+      opacity: 1;
+    }
+
+    .title {
+      padding: 9px 0% 9px 0;
+
+      .prices {
+        top: 0;
+        left: 0;
+        position: relative;
+        transform: translate(0);
+      }
+
+      .case-info {
+        transform: translate(0);
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        .timer {
+          margin-left: -10px;
+        }
+      }
+    }
+
+    .loot-drum {
+      .loot-list {
+        opacity: 1;
+      }
+
+      .case-img {
+        max-height: 125%;
+  
+        position: absolute;
+        top: -15px;
+        left: 90%;
+        right: 0;
+  
+        transform: translate(0);
+      }
+    }
+
+    .select-container {
+      .btns-wrapper {
+        flex-direction: row;
+
+        position: relative;
+        top: 0;
+        transform: translate(0);
+
+        .open-btns {
+          margin: unset;
+          order: 1;
+
+          > button:last-child {
+            margin-right: 15px;
+          }
+        }
+
+        .multipliers-wrapper {
+          order: 2;
+        }
+      }
+    }
+  }
+}

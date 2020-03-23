@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./build/css/main.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="root">
+    <div class="content-grid-wrapper">
+      <header class="header"></header>
+      <aside class="fixed-aside">
+        <div class="side-menu">
+          <div class="profile">
+            <div class="avatar">
+              <img src="./build/images/avatar.svg" alt="avatar" />
+              <div class="green-point"></div>
+              <div class="arrow-btn">
+                <div class="arrow"></div>
+                <div class="tooltip-menu">
+                  <a class="tooltip-menu-item">профиль</a>
+                  <a class="tooltip-menu-item">баланс</a>
+                  <a class="tooltip-menu-item">инвентарь</a>
+                  <a class="tooltip-menu-item">пополнение</a>
+                </div>
+              </div>
+              <div class="load"></div>
+            </div>
+            <a href="#" target="_blank" class="side-menu-item">
+              <img class="side-menu-image" src="./build/images/profile/notification.svg" alt="notification">
+              <div class="notification">3</div>
+            </a>
+            <a href="#" target="_blank" class="side-menu-item green-style">
+              <img class="side-menu-image" src="./build/images/profile/inventory.svg" alt="inventory">
+            </a>
+            <a href="#" target="_blank" class="side-menu-item green-style">
+              <img class="side-menu-image" src="./build/images/profile/replenish.svg" alt="replenish">
+              <div class="tooltip">пополнить</div>
+            </a>
+          </div>
+          <nav class="menu">
+            <a href="#" target="_blank" class="side-menu-item">
+              <img class="side-menu-image" src="./build/images/menu/top.svg" alt="topchart">
+            </a>
+            <a href="#" target="_blank" class="side-menu-item">
+              <img class="side-menu-image" src="./build/images/menu/contracts.svg" alt="contracts">
+            </a>
+            <a href="#" target="_blank" class="side-menu-item">
+              <img class="side-menu-image" src="./build/images/menu/upgrade.svg" alt="upgrade">
+            </a>
+            <a href="#" target="_blank" class="side-menu-item">
+              <img class="side-menu-image" src="./build/images/menu/scrolls.svg" alt="scrolls">
+            </a>
+            <a href="#" target="_blank" class="side-menu-item">
+              <img class="side-menu-image" src="./build/images/menu/more.svg" alt="more">
+            </a>
+          </nav>
+          <div class="social">
+            <a href="#" target="_blank">
+              <img src="./build/images/social/facebook.svg" alt="facebook">
+            </a>
+            <a href="#" target="_blank">
+              <img src="./build/images/social/twitter.svg" alt="twitter">
+            </a>
+            <a href="#" target="_blank">
+              <img src="./build/images/social/instagram.svg" alt="instagram">
+            </a>
+            <a href="#" target="_blank">
+              <img src="./build/images/social/VK.svg" alt="VK">
+            </a>
+            <a href="#" target="_blank">
+              <img src="./build/images/social/youtube.svg" alt="youtube">
+            </a>
+          </div>
+        </div>
+        <div class="live-drops">
+          <div class="live-btns">
+            <div class="btn">live</div>
+            <div class="btn is-active">top</div>
+          </div>
+          <div class="live-item">
+            <span class="rare">arcana</span>
+            <div class="live-underline"></div>
+          </div>
+          <div class="live-item">
+            <span class="rare">arcana</span>
+            <div class="live-underline"></div>
+          </div>
+          <div class="live-item">
+            <span class="rare">arcana</span>
+            <div class="live-underline"></div>
+          </div>
+          <div class="live-item">
+            <span class="rare">arcana</span>
+            <div class="live-underline"></div>
+          </div>
+          <div class="live-item">
+            <span class="rare">arcana</span>
+            <div class="live-underline"></div>
+          </div>
+          <div class="live-item">
+            <div class="info">
+              <img src="/build/images/live-drop/live-drop-logo.svg" alt="avatar" class="avatar" />
+              <span class="name">alexander</span>
+              <img src="/build//images/live-drop/case.svg" alt="case" class="case" />
+            </div>
+            <span class="rare">arcana</span>
+            <div class="live-underline"></div>
+          </div>
+          <div class="live-item">
+            <span class="rare">arcana</span>
+            <div class="live-underline"></div>
+          </div>
+          <div class="live-item">
+            <span class="rare">arcana</span>
+            <div class="live-underline"></div>
+          </div>
+          <div class="live-item">
+            <span class="rare">arcana</span>
+            <div class="live-underline"></div>
+          </div>
+        </div>
+      </aside>
+      <div class="stats">
+        <div class="propmo">
+          <img class="promo-image" src="/build/images/stats/bristleback.svg" alt="bristleback">
+          <div class="info">
+            <span class="get-promo">Забирай промокод!</span>
+            <div class="promo-code">
+              <div class="code">HBBQ-2204</div>
+              <div class="text">
+                <span class="green-text">
+                  <b>5%</b> к пополнению баланса
+                </span>
+                [вводится при пополнении]
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="counters">
+          <div class="item">
+            <span>342 070</span>
+            <span><span class="delet-text">открыто</span> кейсов</span>
+          </div>
+          <div class="item">
+            <span>1 551 220</span>
+            <span>пользователей <span class="delet-text">всего</span></span>
+          </div>
+          <div class="item">
+            <span>7 850</span>
+            <span>контрактов</span>
+          </div>
+          <div class="item">
+            <span>37 850</span>
+            <span>апгрейдов</span>
+          </div>
+          <div class="item">
+            <span>61 072</span>
+            <span>Аркан</span>
+          </div>
+          <div class="item gray-style">
+            <span>421</span>
+            <span>онлайн</span>
+          </div>
+        </div>
+      </div>
+      <main class="main-content-wrapper">
+        <div class="info-wrapper">
+          <div class="title">
+            <span>FAQ</span>
+          </div>
+          <div class="content">
+            Акцепт Пользовательского соглашения означает ознакомление и согласие Пользователя с его условиями,
+            а также обязательство Пользователя исполнять все положения и правила, установленные в тексте
+            Пользовательского соглашения.
+          </div>
+        </div>
+        <div class="info-wrapper faq">
+          <div class="questions-list">
+            <div class="question-item">
+              <div class="question">
+                <div class="toggle-btn"></div>
+                <span>Как верно зарегистрироваться на проекте?</span>
+              </div>
+              <div class="answer"></div>
+            </div>
+            <div class="question-item">
+              <div class="question">
+                <div class="toggle-btn"></div>
+                <span>Как верно зарегистрироваться на проекте?</span>
+              </div>
+              <div class="answer"></div>
+            </div>
+            <div class="question-item">
+              <div class="question">
+                <div class="toggle-btn"></div>
+                <span>Как верно зарегистрироваться на проекте?</span>
+              </div>
+              <div class="answer"></div>
+            </div>
+            <div class="question-item">
+              <div class="question">
+                <div class="toggle-btn"></div>
+                <span>Как верно зарегистрироваться на проекте?</span>
+              </div>
+              <div class="answer"></div>
+            </div>
+            <div class="question-item">
+              <div class="question">
+                <div class="toggle-btn"></div>
+                <span>Как верно зарегистрироваться на проекте?</span>
+              </div>
+              <div class="answer"></div>
+            </div>
+            <div class="question-item">
+              <div class="question">
+                <div class="toggle-btn"></div>
+                <span>Как верно зарегистрироваться на проекте?</span>
+              </div>
+              <div class="answer"></div>
+            </div>
+            <div class="question-item">
+              <div class="question">
+                <div class="toggle-btn"></div>
+                <span>Как верно зарегистрироваться на проекте?</span>
+              </div>
+              <div class="answer"></div>
+            </div>
+            <div class="question-item">
+              <div class="question">
+                <div class="toggle-btn"></div>
+                <span>Как верно зарегистрироваться на проекте?</span>
+              </div>
+              <div class="answer"></div>
+            </div>
+          </div>
+          <div class="questions-list">
+            <div class="question-item">
+              <div class="question">
+                <div class="toggle-btn"></div>
+                <span>Как верно зарегистрироваться на проекте?</span>
+              </div>
+              <div class="answer"></div>
+            </div>
+            <div class="question-item">
+              <div class="question">
+                <div class="toggle-btn"></div>
+                <span>Как верно зарегистрироваться на проекте?</span>
+              </div>
+              <div class="answer"></div>
+            </div>
+            <div class="question-item">
+              <div class="question">
+                <div class="toggle-btn"></div>
+                <span>Как верно зарегистрироваться на проекте?</span>
+              </div>
+              <div class="answer"></div>
+            </div>
+            <div class="question-item">
+              <div class="question">
+                <div class="toggle-btn"></div>
+                <span>Как верно зарегистрироваться на проекте?</span>
+              </div>
+              <div class="answer"></div>
+            </div>
+            <div class="question-item">
+              <div class="question">
+                <div class="toggle-btn"></div>
+                <span>Как верно зарегистрироваться на проекте?</span>
+              </div>
+              <div class="answer"></div>
+            </div>
+            <div class="question-item">
+              <div class="question">
+                <div class="toggle-btn"></div>
+                <span>Как верно зарегистрироваться на проекте?</span>
+              </div>
+              <div class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestias mollitia!</div>
+            </div>
+            <div class="question-item">
+              <div class="question">
+                <div class="toggle-btn"></div>
+                <span>Как верно зарегистрироваться на проекте?</span>
+              </div>
+              <div class="answer"></div>
+            </div>
+            <div class="question-item">
+              <div class="question">
+                <div class="toggle-btn"></div>
+                <span>Как верно зарегистрироваться на проекте?</span>
+              </div>
+              <div class="answer"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <aside class="feed-backs">
+      </aside>
+      <footer>
+        <div class="item four-real">
+          <img src="./build/images/logo_footer.svg" alt="logo_footer">
+          <div class="licence">
+            Все права принадлежат сервису
+            <span>«<a href="#">4real.com</a>»</span>
+          </div>
+        </div>
+        <div class="item info">
+          <nav class="footer-navigateon">
+            <a href="./policy.html">пользовательское соглашение</a>
+            <a href="./contacts.html">контакты</a>
+            <a href="#">faq</a>
+            <a href="#">отзывы</a>
+          </nav>
+          Все операции с платежными картами происходят в соответствии с
+          требованиями Visa International и MasterCard WorldWide
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>

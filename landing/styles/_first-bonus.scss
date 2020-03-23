@@ -1,0 +1,91 @@
+.first-bonus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    .first-bonus-title {
+        display: flex;
+        align-items: center;
+        @extend %montserratFontStyle;
+
+        .text {        
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            color: #c3301e;
+            font-size: 17px;
+            text-transform: uppercase;
+
+            margin-right: 13px;
+
+            span {
+                font-size: 20px;
+                line-height: 1.4rem;
+            }
+        }
+
+        .count {
+            font-size: 36px;
+            font-weight: bold;
+        }
+    }
+
+    .get-btn {
+        position: relative;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            z-index: 1;
+        }
+
+        button {
+            margin-top: 97px;
+        }
+    }
+
+    .dendi {
+        position: absolute;
+        right: calc(50% + 8px);
+        top: -29px;
+        transform: translate(60%, 0);
+
+        z-index: 12;
+
+        pointer-events: none;
+    }
+
+    .go-down {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 95px;
+
+        position: relative;
+        z-index: 13;
+    
+
+        span {
+            font-size: 56px;
+            text-transform: uppercase;
+            line-height: 0.9;
+
+            filter: drop-shadow(0 0 10px $black);
+            &:first-child {
+                font-size: 100px;
+            }
+        }
+    }
+
+    .drop-line {
+        margin: 112px 0 123px;
+        max-width: 100%;
+    }
+}

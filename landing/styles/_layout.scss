@@ -1,0 +1,79 @@
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: $primary-background-color;
+    @extend %defaultFontStyles;
+}
+
+main {
+    margin-top: -451px;
+}
+
+.gradient-text {
+    background-image: $primary-font-gradient;
+    @extend %defaultFontStyles;
+    @extend %gradientText;
+}
+
+.flex-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.central-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 100px;
+    text-transform: uppercase;
+
+    
+    @media (max-width: #{$low-screen}) {
+        font-size: 80px;
+    }
+}
+
+.sub-title {
+    font-size: 45px;
+
+    
+    @media (max-width: #{$low-screen}) {
+        font-size: 40px;
+    }
+}
+
+.red-btn {
+    height: 52px;
+    width: 238px;
+
+    background-image: url(/build/images/get-btn-texture.png), linear-gradient(to bottom, rgba(223,61,29,1) 0%, rgba(169,36,29,1) 100%);
+    border: 2px solid rgba(223,61,29,0.2);
+    box-sizing: border-box;
+    box-shadow: 0 0 25px rgba(223,61,29,0.5);
+    font-size: 16px;
+    @extend %montserratFontStyle;
+    text-transform: uppercase;
+    outline: none;
+
+    padding: 0;
+
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+
+    &:hover {
+        filter: brightness(1.2); 
+    }
+}
+
+img {
+    pointer-events: none;
+    max-width: 100%;
+}

@@ -1,0 +1,98 @@
+//colors 
+$orage: #c14a09;
+
+//background colors
+$primary-background-color: #161a22;
+$secondary-backround-color: #1f232c;
+
+$white-background-color: #fff;
+// $qwe: #1e222b;
+
+$light-gray-background-color: #22262f;
+
+$dark-gray-background-color: #24272f;
+$dark-gray-background-color2: #191d25;
+$secondary-dark-gray-background-color: #1b1f27;
+
+$primary-black-background-color: #12161c;
+
+$primary-green-background-color: #adf02a;
+$secondary-gray-background-color: #246218;
+
+$red-primary-rad-background-color: #ea0d08;
+
+//gradients
+$green-background-gradient: linear-gradient(to bottom, rgba(30,159,39,1) 25%, rgba(113,186,11,1) 100%);
+$green-background-gradient-right: linear-gradient(to right, rgba(30,159,39,1) 25%, rgba(113,186,11,1) 100%);
+$upgrade-circle-gradient: radial-gradient(circle at top,rgba(208,7,0,1) 0%, rgba(246,110,5,1) 15%, rgba(253,207,0,1) 30%, rgba(179,206,13,1) 45%, rgba(132,200,16,1) 60%, rgba(83,147,34,1) 75%, rgba(56,79,50,1) 85%, rgba(24,28,35,1) 100%);
+$backgraund-circle-gradient: radial-gradient(rgba(36,42,53,1) 0%, rgba(20,23,30,1) 65%);
+
+//border colors
+$primary-green-border-color: #9cff00;
+$secondary-green-border-color: #324425;
+$dark-green-border-color: #4f7e0b;
+$light-green-border-color: #3ba228;
+
+$primary-gray-border-color: #1d2129;
+$secondary-gray-border-color: #252a34;
+$light-gray-border-color: #444850;
+$dark-gray-border-color: #2c313f;
+$dark-gray-border-color2: #313138;
+$dark-gray-border-color3: #3a4150;
+$unactive-gray-border-color: #252832;
+$middle-gray-border-color: #7f7f7f;
+$primary-white-border-color: #c4c4c4;
+
+
+$yellow-border-color: #ffb900;
+$light-yellow-border-color: #e3bf30;
+
+$primary-purple-border-color: #9328ef;
+
+//box-shadow-colors
+$primary-green-box-shadow-color: #3a5626;
+$primary-dark-box-shadow-color: #1d2129;
+$secondary-dark-box-shadow-color: #1a1e27;
+
+//fonts colors
+$primary-font-color: #d9dee5;
+$secondary-font-color: #545860;
+$primary-green-font-color: #59892b;
+$secondary-green-font-color: #5cc32d;
+$light-green-font-color: #4ad428;
+$secondary-light-green-font-color: #7ecd34;
+$dark-gray-font-color: #343941;
+$light-gray-font-color: #8c929e;
+$yellow-font-color: #ffd40d;
+$primary-yellow-font-color: #fcb700;
+$darck-yellow-font-color: #c39a0f;
+$purple-font-color: #7235d5;
+
+$white-font-color: #fff;
+$dark-white-font-color: #d3cdc4;
+
+$tooltip-triangle-color: #5b5f67;
+
+//heights
+$header-height: 100px;
+$stats-height: 138px;
+$footer-height: 94px;
+$payments-height: 94px;
+$side-menu-width: 293px;
+
+
+$phone: 640px;
+
+//adaptive font-size
+@function calcAdaptiveSize($f-min, $f-max, $v-min, $v-max) {
+  $k: ($f-max - $f-min)/($v-max - $v-min);
+  $b: $f-min - $k * $v-min;
+
+  $b: $b * 1px;
+
+  @return calc( #{$k} * 100vw + #{$b} );
+}
+
+$animation-delay: 0.5s;
+//$animation-increment - приращение анмиции, устанавливает зависимость между дилем и скростью анимации
+$animation-increment: 0.003s; //чем меньще значение тем быстрее анмиция и наобаро
